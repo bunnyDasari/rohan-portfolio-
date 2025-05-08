@@ -217,9 +217,9 @@ function App() {
                 { name: 'HTML', level: 90 },
                 { name: 'CSS', level: 90 },
                 { name: 'JavaScript', level: 85 },
-                { name: 'React', level: 90 },
+                { name: 'ReactJs', level: 90 },
                 { name: 'Tailwind CSS', level: 95 },
-                { name: 'Nextjs', level: 95 },
+                { name: 'NextJs', level: 95 },
                 { name: 'TypeScript', level: 95 }
               ]}
             />
