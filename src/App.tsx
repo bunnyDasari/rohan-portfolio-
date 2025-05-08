@@ -12,21 +12,21 @@ function App() {
   const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.95]);
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-white">
+    <div className="min-h-screen bg-gradient-to-b from-zinc-950 to-zinc-900 text-white">
       {/* Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-400 to-pink-600 origin-left z-50"
+        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 origin-left z-50"
         style={{ scaleX: scrollYProgress }}
       />
 
       {/* Header/Navigation */}
-      <nav className="fixed w-full z-40 bg-zinc-950/80 backdrop-blur-sm">
+      <nav className="fixed w-full z-40 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800/50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-2xl font-display font-bold gradient-text"
+              className="text-2xl font-display font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent"
             >
               &lt;Rohan Dasari /&gt;
             </motion.div>
@@ -42,7 +42,8 @@ function App() {
       </nav>
 
       {/* Hero Section with Profile */}
-      <section id="home" className="min-h-screen flex items-center justify-center pt-20">
+      <section id="home" className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-purple-500/10 via-transparent to-transparent" />
         <div className="container mx-auto px-4">
           <motion.div
             style={{ opacity, scale }}
@@ -67,7 +68,7 @@ function App() {
                   />
                 </motion.div>
                 <motion.div
-                  className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full opacity-0 group-hover:opacity-30 transition-opacity duration-300 blur"
+                  className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-full opacity-0 group-hover:opacity-30 transition-opacity duration-300 blur-xl"
                   whileHover={{ scale: 1.05 }}
                 />
               </div>
@@ -86,7 +87,7 @@ function App() {
               </div>
               <h1 className="text-5xl md:text-7xl font-display font-bold mb-6">
                 MERN Stack{' '}
-                <span className="gradient-text">Developer</span>
+                <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">Developer</span>
               </h1>
               <p className="text-xl text-zinc-400 mb-8 max-w-2xl font-light">
                 Turning ideas into impactful digital solutions ✨
@@ -116,7 +117,7 @@ function App() {
                 </div>
                 <motion.a
                   href="#contact"
-                  className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full font-medium hover:from-purple-600 hover:to-pink-600 transition-colors flex items-center space-x-2"
+                  className="px-8 py-3 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-full font-medium hover:from-purple-600 hover:via-pink-600 hover:to-red-600 transition-colors flex items-center space-x-2"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -130,8 +131,9 @@ function App() {
       </section>
 
       {/* About Section with New Taglines */}
-      <section id="about" className="py-20">
-        <div className="container mx-auto px-4">
+      <section id="about" className="py-20 relative">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-purple-500/5 via-transparent to-transparent" />
+        <div className="container mx-auto px-4 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -139,31 +141,41 @@ function App() {
             className="text-center mb-16"
           >
             <span className="text-purple-400 font-display mb-4 block">🌟 ABOUT ME</span>
-            <h2 className="text-4xl font-display font-bold mb-4">Turning Ideas Into Reality</h2>
+            <h2 className="text-4xl font-display font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">Turning Ideas Into Reality</h2>
             <div className="grid md:grid-cols-3 gap-8 mt-12">
-              <div className="p-6 bg-zinc-800/50 rounded-xl">
+              <motion.div
+                whileHover={{ y: -5 }}
+                className="p-6 bg-zinc-800/50 rounded-xl backdrop-blur-sm border border-zinc-700/50"
+              >
                 <div className="text-3xl mb-4">🎯</div>
                 <h3 className="text-xl font-display font-bold mb-2">Problem Solver</h3>
                 <p className="text-zinc-400">Turning complex challenges into elegant solutions</p>
-              </div>
-              <div className="p-6 bg-zinc-800/50 rounded-xl">
+              </motion.div>
+              <motion.div
+                whileHover={{ y: -5 }}
+                className="p-6 bg-zinc-800/50 rounded-xl backdrop-blur-sm border border-zinc-700/50"
+              >
                 <div className="text-3xl mb-4">💡</div>
                 <h3 className="text-xl font-display font-bold mb-2">Innovation Driven</h3>
                 <p className="text-zinc-400">Always exploring new technologies and approaches</p>
-              </div>
-              <div className="p-6 bg-zinc-800/50 rounded-xl">
+              </motion.div>
+              <motion.div
+                whileHover={{ y: -5 }}
+                className="p-6 bg-zinc-800/50 rounded-xl backdrop-blur-sm border border-zinc-700/50"
+              >
                 <div className="text-3xl mb-4">🤝</div>
                 <h3 className="text-xl font-display font-bold mb-2">Team Player</h3>
                 <p className="text-zinc-400">Collaborating to achieve exceptional results</p>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>
       </section>
 
-
-      <section className="py-20 bg-zinc-900/50">
-        <div className="container mx-auto px-4">
+      {/* Experience Section */}
+      <section className="py-20 bg-zinc-900/50 relative">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-purple-500/5 via-transparent to-transparent" />
+        <div className="container mx-auto px-4 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -171,32 +183,39 @@ function App() {
             className="text-center mb-16"
           >
             <span className="text-purple-400 font-display mb-4 block">💼 EXPERIENCE</span>
-            <h2 className="text-4xl font-display font-bold mb-4">Professional Journey</h2>
+            <h2 className="text-4xl font-display font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">Professional Journey</h2>
             <div className="grid md:grid-cols-2 gap-8 mt-12">
-              <div className="p-6 bg-zinc-800/50 rounded-xl text-left">
+              <motion.div
+                whileHover={{ y: -5 }}
+                className="p-6 bg-zinc-800/50 rounded-xl text-left backdrop-blur-sm border border-zinc-700/50"
+              >
                 <div className="flex items-center space-x-2 mb-4">
                   <Code className="w-6 h-6 text-purple-400" />
                   <h3 className="text-xl font-display font-bold">MERN Stack Developer Intern</h3>
                 </div>
                 <p className="text-zinc-400 mb-2">Rablo. • Aug-2024 - Nov-2024</p>
                 <p className="text-zinc-300">As a MERN Stack Developer, I was responsible for implementing user authentication systems, ensuring secure login and session management. I designed and integrated backend APIs using Node.js and Express.js to facilitate seamless communication between the frontend and MongoDB database. My role also involved developing and optimizing user dashboards, providing intuitive user experiences while ensuring efficient data processing and real-time functionality. Additionally, I collaborated with cross-functional teams to deliver high-performance solutions and maintain application scalability.</p>
-              </div>
-              <div className="p-6 bg-zinc-800/50 rounded-xl text-left">
+              </motion.div>
+              <motion.div
+                whileHover={{ y: -5 }}
+                className="p-6 bg-zinc-800/50 rounded-xl text-left backdrop-blur-sm border border-zinc-700/50"
+              >
                 <div className="flex items-center space-x-2 mb-4">
                   <Code className="w-6 h-6 text-purple-400" />
                   <h3 className="text-xl font-display font-bold">Frontend Developer Intern</h3>
                 </div>
                 <p className="text-zinc-400 mb-2">Ivory Innovations Pvt Ltd. • Jan-2025 - April-2025</p>
                 <p className="text-zinc-300">As a Frontend Developer, I worked extensively with Next.js and Tailwind CSS to build responsive, dynamic, and high-performance web applications. My responsibilities included developing user-friendly interfaces, ensuring smooth navigation and functionality across different devices. I also integrated APIs to enhance application functionality, enabling seamless data exchange between the frontend and backend. Through collaboration with design teams, I implemented clean, scalable, and efficient code, while maintaining a focus on optimizing user experience and performance.</p>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 bg-zinc-900/50">
-        <div className="container mx-auto px-4">
+      <section id="skills" className="py-20 bg-zinc-900/50 relative">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-purple-500/5 via-transparent to-transparent" />
+        <div className="container mx-auto px-4 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -204,7 +223,7 @@ function App() {
             className="text-center mb-16"
           >
             <span className="text-purple-400 font-display mb-4 block">⚡ SKILLS & EXPERTISE</span>
-            <h2 className="text-4xl font-display font-bold mb-4">My Technical Skills</h2>
+            <h2 className="text-4xl font-display font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">My Technical Skills</h2>
             <p className="text-zinc-400 max-w-2xl mx-auto">
               A collection of technologies I've mastered throughout my journey as a developer.
             </p>
@@ -229,8 +248,7 @@ function App() {
               skills={[
                 { name: 'Node.js', level: 88 },
                 { name: 'Express.js', level: 88 },
-                { name: 'Python', level: 82 },
-                //{ name: 'PostgreSQL', level: 85 }
+                { name: 'Python', level: 82 }
               ]}
             />
             <SkillCard
@@ -238,8 +256,7 @@ function App() {
               title="Database"
               skills={[
                 { name: 'MongoDB', level: 90 },
-                { name: 'MySQL', level: 85 },
-                //{ name: 'Redis', level: 80 }
+                { name: 'MySQL', level: 85 }
               ]}
             />
             <SkillCard
@@ -247,7 +264,6 @@ function App() {
               title="Communication Protocols"
               skills={[
                 { name: 'REST APIs', level: 92 },
-                //{ name: 'GraphQL', level: 85 },
                 { name: 'WebSockets', level: 80 }
               ]}
             />
@@ -267,8 +283,7 @@ function App() {
                 { name: 'Git', level: 85 },
                 { name: 'GitHub', level: 85 },
                 { name: 'VS Code', level: 90 },
-                { name: 'Postman', level: 90 },
-                //{ name: 'Adobe XD', level: 82 }
+                { name: 'Postman', level: 90 }
               ]}
             />
           </div>
@@ -276,8 +291,9 @@ function App() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20">
-        <div className="container mx-auto px-4">
+      <section id="projects" className="py-20 relative">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-purple-500/5 via-transparent to-transparent" />
+        <div className="container mx-auto px-4 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -285,14 +301,14 @@ function App() {
             className="text-center mb-16"
           >
             <span className="text-purple-400 font-display mb-4 block">🚀 FEATURED WORK</span>
-            <h2 className="text-4xl font-display font-bold mb-4">Latest Projects</h2>
+            <h2 className="text-4xl font-display font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">Latest Projects</h2>
             <p className="text-zinc-400 max-w-2xl mx-auto">
               Explore some of my recent work and personal projects.
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ProjectCard
-              title="Task Manger"
+              title="Task Manager"
               description="A task manager helps you organize, prioritize, and track your daily to-dos and long-term goals efficiently."
               image={img1}
               tags={['Nextjs', 'Tailwind css', 'Zustand']}
@@ -304,7 +320,6 @@ function App() {
               image={img2}
               tags={['React.js', "Node.js", 'Express.js', 'MongoDb', "JWT Auth"]}
               githubUrl="https://github.com/bunnyDasari/PATIENT-SMART-CARD"
-
             />
             <ProjectCard
               title="Course Selling app"
@@ -318,8 +333,9 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-zinc-900/50">
-        <div className="container mx-auto px-4">
+      <section id="contact" className="py-20 bg-zinc-900/50 relative">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-purple-500/5 via-transparent to-transparent" />
+        <div className="container mx-auto px-4 relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -327,7 +343,7 @@ function App() {
             className="max-w-2xl mx-auto text-center"
           >
             <span className="text-purple-400 font-display mb-4 block">📬 GET IN TOUCH</span>
-            <h2 className="text-4xl font-display font-bold mb-4">Let's Work Together</h2>
+            <h2 className="text-4xl font-display font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">Let's Work Together</h2>
             <p className="text-zinc-400 mb-8">
               I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
             </p>
@@ -362,13 +378,13 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 border-t border-zinc-800">
+      <footer className="py-8 border-t border-zinc-800/50">
         <div className="container mx-auto px-4 text-center text-zinc-400">
-          {/* <p className="flex items-center justify-center space-x-2">
+          <p className="flex items-center justify-center space-x-2">
             <span>Made with</span>
             <Heart className="w-4 h-4 text-red-500" />
             <span>using React & Tailwind</span>
-          </p> */}
+          </p>
         </div>
       </footer>
     </div>
@@ -383,7 +399,7 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
       whileHover={{ scale: 1.05 }}
     >
       {children}
-      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-600 transition-all group-hover:w-full" />
+      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 transition-all group-hover:w-full" />
     </motion.a>
   );
 }
@@ -394,7 +410,7 @@ function SocialLink({ href, icon, label }: { href: string; icon: React.ReactNode
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="p-2 bg-zinc-800 rounded-full hover:bg-zinc-700 transition-colors group relative"
+      className="p-2 bg-zinc-800/50 backdrop-blur-sm rounded-full hover:bg-zinc-700 transition-colors group relative"
       whileHover={{ scale: 1.1, rotate: 5 }}
       whileTap={{ scale: 0.9 }}
     >
@@ -420,10 +436,10 @@ function SkillCard({ icon, title, skills }: {
       viewport={{ once: true }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
-      className="bg-zinc-800/50 rounded-xl p-6 hover:bg-zinc-800 transition-colors"
+      className="bg-zinc-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-zinc-800 transition-colors border border-zinc-700/50"
     >
       <motion.div
-        className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4"
+        className="w-12 h-12 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-lg flex items-center justify-center mb-4"
         animate={{ rotate: isHovered ? 360 : 0 }}
         transition={{ duration: 0.6 }}
       >
@@ -467,7 +483,7 @@ function ProjectCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       whileHover={{ y: -5 }}
-      className="bg-zinc-800/50 rounded-xl overflow-hidden group"
+      className="bg-zinc-800/50 backdrop-blur-sm rounded-xl overflow-hidden group border border-zinc-700/50"
     >
       <div className="relative overflow-hidden">
         <motion.img
@@ -475,14 +491,14 @@ function ProjectCard({
           alt={title}
           className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
           <motion.a
             href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="px-6 py-3 bg-[#333] text-white rounded-full font-medium flex items-center space-x-2"
+            className="px-6 py-3 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white rounded-full font-medium flex items-center space-x-2"
           >
             <Github className="w-4 h-4" />
             <span>View Code</span>
@@ -496,7 +512,7 @@ function ProjectCard({
           {tags.map((tag) => (
             <span
               key={tag}
-              className="text-sm px-3 py-1 bg-zinc-700 rounded-full text-zinc-300"
+              className="text-sm px-3 py-1 bg-zinc-700/50 backdrop-blur-sm rounded-full text-zinc-300"
             >
               {tag}
             </span>
