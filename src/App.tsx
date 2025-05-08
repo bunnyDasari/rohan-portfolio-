@@ -244,7 +244,7 @@ function App() {
             />
             <SkillCard
               icon={<Globe />}
-              title="Web Technologies"
+              title="Communication Protocols"
               skills={[
                 { name: 'REST APIs', level: 92 },
                 //{ name: 'GraphQL', level: 85 },
