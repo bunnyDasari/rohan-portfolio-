@@ -267,6 +267,7 @@ function App() {
                 { name: 'Git', level: 85 },
                 { name: 'GitHub', level: 85 },
                 { name: 'VS Code', level: 90 },
+                { name: 'Postman', level: 90 },
                 //{ name: 'Adobe XD', level: 82 }
               ]}
             />
