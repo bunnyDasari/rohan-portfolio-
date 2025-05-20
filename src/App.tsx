@@ -5,6 +5,11 @@ import profileimg from "./images/_-jaIzsp_400x400.jpg";
 import img1 from "./images/premium_photo-1681487870238-4a2dfddc6bcb.jpeg";
 import img2 from './images/csm_content_smarthealthcards_cardcontrolledaccess_f29edf0548.jpg';
 import img3 from './images/online-course-min.png';
+import food from "./images/images.png"
+import fruit from "./images/merge-fruit-logo.avif"
+import number from "./images/banner.png"
+import Tip from "./images/7b6ccaf9353b3c7da10cd594f8c825eb.jpeg"
+
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -256,7 +261,8 @@ function App() {
               title="Database"
               skills={[
                 { name: 'MongoDB', level: 90 },
-                { name: 'MySQL', level: 85 }
+                { name: 'MySQL', level: 85 },
+                { name: 'postgresql', level: 85 }
               ]}
             />
             <SkillCard
@@ -327,6 +333,34 @@ function App() {
               image={img3}
               tags={['React.js', "Node.js", 'Express.js', 'MongoDb', "JWT Auth"]}
               githubUrl="https://github.com/bunnyDasari/course-app"
+            />
+            <ProjectCard
+              title="Tip Calculator"
+              description="Tip Calculator helps you quickly calculate tips and split bills with ease. Just enter the bill amount, choose a tip percentage, and get instant results — perfect for dining out or group payments!"
+              image={Tip}
+              tags={['HTML', 'CSS', 'Javascript']}
+              githubUrl="https://to-do-app-one-kappa-97.vercel.app/"
+            />
+            <ProjectCard
+              title="Food Munch"
+              description="Food Munch is your ultimate destination for delicious recipes, restaurant reviews, and everything food! From quick bites to gourmet delights"
+              image={food}
+              tags={["HTML", "CSS", "Bootstrap"]}
+              githubUrl="https://eatsmrat.ccbp.tech"
+            />
+            <ProjectCard
+              title="Match Game"
+              description="Matching Game is a fun and addictive memory puzzle designed to challenge your brain!"
+              image={fruit}
+              tags={['HTML', 'CSS', 'Javascript']}
+              githubUrl="https://secgamezonearea.ccbp.tech/"
+            />
+            <ProjectCard
+              title="Number Matching Game"
+              description="Number Matching Game is a fun and brain-boosting puzzle where you match pairs of numbers. Sharpen your memory and enjoy quick, engaging gameplay for all ages!"
+              image={number}
+              tags={['HTML', 'CSS', 'Javascript']}
+              githubUrl="https://vvvvvf.ccbp.tech/"
             />
           </div>
         </div>
