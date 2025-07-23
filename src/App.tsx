@@ -9,7 +9,7 @@ import food from "./images/images.png"
 import fruit from "./images/merge-fruit-logo.avif"
 import number from "./images/banner.png"
 import Tip from "./images/7b6ccaf9353b3c7da10cd594f8c825eb.jpeg"
-
+import paytm from "./images/WhatsApp Image 2025-07-23 at 09.48.05.jpeg"
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -333,6 +333,13 @@ function App() {
               image={img3}
               tags={['React.js', "Node.js", 'Express.js', 'MongoDb', "JWT Auth"]}
               githubUrl="https://github.com/bunnyDasari/course-app"
+            />
+            <ProjectCard
+              title="Paytm clone"
+              description="The Paytm Clone is a digital wallet and online payment system that allows users to securely transfer money, pay utility bills, recharge mobile numbers, and make online purchases."
+              image={paytm}
+              tags={['React.js', "Node.js", 'Express.js', 'MongoDb', "JWT Auth"]}
+              githubUrl="https://github.com/bunnyDasari/paytm"
             />
             <ProjectCard
               title="Tip Calculator"
