@@ -36,11 +36,11 @@ function App() {
               &lt;Rohan Dasari /&gt;
             </motion.div>
             <div className="hidden md:flex space-x-8">
-              <NavLink href="#home">🏠 Home</NavLink>
-              <NavLink href="#about">👋 About</NavLink>
-              <NavLink href="#skills">⚡ Skills</NavLink>
-              <NavLink href="#projects">🚀 Projects</NavLink>
-              <NavLink href="#contact">📬 Contact</NavLink>
+              <NavLink href="#home"> Home</NavLink>
+              <NavLink href="#about"> About</NavLink>
+              <NavLink href="#skills"> Skills</NavLink>
+              <NavLink href="#projects"> Projects</NavLink>
+              <NavLink href="#contact"> Contact</NavLink>
             </div>
           </div>
         </div>
@@ -145,7 +145,7 @@ function App() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="text-purple-400 font-display mb-4 block">🌟 ABOUT ME</span>
+            <span className="text-purple-400 font-display mb-4 block">ABOUT ME</span>
             <h2 className="text-4xl font-display font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">Turning Ideas Into Reality</h2>
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               <motion.div
