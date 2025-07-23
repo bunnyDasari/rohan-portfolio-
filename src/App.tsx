@@ -262,6 +262,7 @@ function App() {
               skills={[
                 { name: 'MongoDB', level: 90 },
                 { name: 'MySQL', level: 85 },
+                { name: 'Redis', level: 85 },
                 { name: 'postgresql', level: 85 }
               ]}
             />
@@ -289,6 +290,7 @@ function App() {
                 { name: 'Git', level: 85 },
                 { name: 'GitHub', level: 85 },
                 { name: 'VS Code', level: 90 },
+                { name: 'Docker', level: 90 },
                 { name: 'Postman', level: 90 }
               ]}
             />
