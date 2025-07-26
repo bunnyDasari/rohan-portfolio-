@@ -10,7 +10,7 @@ import fruit from "./images/merge-fruit-logo.avif"
 import number from "./images/banner.png"
 import Tip from "./images/7b6ccaf9353b3c7da10cd594f8c825eb.jpeg"
 import paytm from "./images/WhatsApp Image 2025-07-23 at 09.48.05.jpeg"
-
+import health from "./images/health-app-icon-featuring-heart-fitness-tracker-tracking-wellness-fitness-goals-health-app-icon-featuring-heart-327169444.webp"
 function App() {
   const { scrollYProgress } = useScroll();
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
@@ -328,6 +328,13 @@ function App() {
               image={img2}
               tags={['React.js', "Node.js", 'Express.js', 'MongoDb', "JWT Auth"]}
               githubUrl="https://github.com/bunnyDasari/PATIENT-SMART-CARD"
+            />
+            <ProjectCard
+              title="Track your health"
+              description="The Patient Smart Card project streamlines healthcare by securely storing and accessing patient records using a unified digital identity."
+              image={health}
+              tags={['React.js', "Node.js", 'Express.js', 'MongoDb', "Clerk Auth"]}
+              githubUrl="https://github.com/bunnyDasari/health-tracker"
             />
             <ProjectCard
               title="Course Selling app"
